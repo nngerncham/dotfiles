@@ -1,0 +1,112 @@
+snippet beg "Begin environment" bA
+\begin{$1}
+	$0
+\end{$1}
+endsnippet
+
+snippet fig "Figure environment" bA
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{$0}
+	\caption{Caption}
+	\label{fig:my_label}
+\end{figure}
+endsnippet
+
+snippet enum "Enumerate" bA
+\begin{enumerate}
+	\item $0
+\end{enumerate}
+endsnippet
+
+snippet itm "Itemize" bA
+\begin{itemize}
+	\item $0
+\end{itemize}
+endsnippet
+
+snippet dfn "Definition" bA
+\begin{definition}[]
+	$0
+\end{definition}
+endsnippet
+
+snippet thm "Theorem" bA
+\begin{theorem}
+	$0
+\end{theorem}
+endsnippet
+
+snippet clm "Claim" bA
+\begin{claim}
+	$0
+\end{claim}
+endsnippet
+
+snippet prf "Proof" bA
+\begin{proof}
+	$0
+\end{proof}
+endsnippet
+
+snippet aln "Aligned equation" bA
+\begin{equation}\label{eqn:my_label}
+\begin{aligned}
+	$0
+\end{aligned}
+\end{equation}
+endsnippet
+
+snippet aaln "Anonymous aligned equation" bA
+$$ \begin{aligned}
+	$0
+\end{aligned} $$
+endsnippet
+
+snippet eqn "Equation" bA
+\begin{equation}\label{eqn:my_label}
+	$0
+\end{equation}
+endsnippet
+
+snippet tbox "tcolorbox environment" bA
+\begin{tcolorbox}[title=$1]
+	$0
+\end{tcolorbox}
+endsnippet
+
+snippet mbn "Set of natural numbers" iA
+\mathbb{N}
+endsnippet
+
+snippet mbz "Set of whole numbers (integers)" iA
+\mathbb{Z}
+endsnippet
+
+snippet mbq "Set of rational numbers" iA
+\mathbb{Q}
+endsnippet
+
+snippet mbr "Set of real numbers" iA
+\mathbb{R}
+endsnippet
+
+snippet eq? "Set ? over =" i
+\overset{?}{=}
+endsnippet
+
+snippet leq? "Set ? over <=" i
+\overset{?}{\leq}
+endsnippet
+
+snippet geq? "Set ? over >=" i
+\overset{?}{\geq}
+endsnippet
+
+snippet lt? "Set ? over <" i
+\overset{?}{<}
+endsnippet
+
+snippet gt? "Set ? over >" i
+\overset{?}{>}
+endsnippet
