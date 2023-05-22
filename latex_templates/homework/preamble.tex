@@ -1,0 +1,64 @@
+% BASE TAKEN FROM ICCS315 SCRIBE NOTES
+
+% --- SETUP STUFF ---
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{booktabs}
+
+\usepackage{url}
+\usepackage[unicode]{hyperref}
+
+\setcounter{secnumdepth}{2}
+
+% --- MATH STUFF ---
+\usepackage{amsthm, amsmath, amssymb}
+\usepackage{mathtools,xspace}
+\usepackage{nicefrac}
+
+\usepackage{bbm}
+\usepackage{dsfont}
+\usepackage{cancel}
+
+\usepackage{blkarray}
+\newcommand{\matindex}[1]{\mbox{\scriptsize#1}}% Matrix index
+
+% --- FONT STUFF ---
+% Has to be under math stuff for some reason :/
+\usepackage{newpxtext, newpxmath}
+\usepackage[T1]{fontenc}
+
+% --- DIAGRAM STUFF ---
+\usepackage{tikz,pgfplots,xcolor,graphicx}
+\usepackage{graphicx}
+\usepackage{colortbl}
+\usepackage{caption}
+
+\usepackage{tcolorbox}
+\usepackage{framed}
+\usepackage{float}
+
+\pgfplotsset{compat=1.18}
+
+% --- THEOREM STUFF ---
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{algorithm}[theorem]{Algorithm}
+
+% --- SELF-DEFINED ENVIRONMENTS ---
+\newenvironment{hwproblem}[2]{
+	\noindent\textbf{Problem #1.} #2
+
+	\begin{framed}
+}{
+	\end{framed}
+}
