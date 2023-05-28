@@ -13,3 +13,6 @@ normal = "block"
 
 [keys.normal]
 "C-u" = "extend_line_above"
+
+[keys.insert.j]
+k = "normal_mode"
