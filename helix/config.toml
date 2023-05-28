@@ -1,0 +1,15 @@
+theme = "kanagawa_transparent"
+
+[editor]
+line-number = "relative"
+
+[editor.soft-wrap]
+enable = true
+wrap-at-text-width = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+
+[keys.normal]
+"C-u" = "extend_line_above"
