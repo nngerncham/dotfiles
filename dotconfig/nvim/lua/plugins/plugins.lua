@@ -48,12 +48,13 @@ local plugins = {
 	-- file trees
 	"nvim-tree/nvim-web-devicons",
 	"MunifTanjim/nui.nvim",
-	{ "nvim-neo-tree/neo-tree.nvim", branch = "v2.x"},
+	{"nvim-neo-tree/neo-tree.nvim", branch = "v2.x"},
 
 	-- autocompletion
 	{'neoclide/coc.nvim', branch = 'release'},
 	"scalameta/nvim-metals",
 	"vim-autoformat/vim-autoformat",
+	"windwp/nvim-autopairs",
 
 	-- LaTeX
 	"lervag/vimtex",
