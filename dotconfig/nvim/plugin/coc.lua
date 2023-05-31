@@ -1,3 +1,5 @@
+local map = vim.api.nvim_set_keymap
+
 vim.g.coc_global_extensions = {
   -- Python
   "coc-pyright",
@@ -14,16 +16,14 @@ vim.g.coc_global_extensions = {
   -- Rust, my beloved
   "coc-rust-analyzer",
 
-  -- Java
-  "coc-java",
+  -- Lua
+  "coc-lua",
 
   -- LaTeX
   "coc-snippets",
   "coc-vimtex",
-
-  -- utils
-  "coc-pairs",
 }
 
 vim.cmd[[inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]]
+map("n", "<leader>r", "<Plug>(coc-rename)", {})

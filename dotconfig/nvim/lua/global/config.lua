@@ -6,7 +6,7 @@ opt.background = "dark"
 opt.cursorline = true
 
 vim.cmd[[set t_Co=256]]
-vim.cmd[[colorscheme kanagawa-dragon]]
+vim.cmd[[colorscheme kanagawa]]
 vim.cmd[[set cc=80]]
 vim.cmd[[set number relativenumber]]
 

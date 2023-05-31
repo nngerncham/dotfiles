@@ -13,3 +13,4 @@ map("n", "gh", "0", options)
 -- returning to normal
 map("i", "jk", "<esc>", options)
 map("v", "JK", "<esc>", options)
+map("t", "jk", "<C-\\><C-n>", options)

@@ -12,7 +12,17 @@ insert = "bar"
 normal = "block"
 
 [keys.normal]
+# selection
+V = ["goto_first_nonwhitespace", "extend_to_line_end"]
+D = ["ensure_selections_forward", "extend_to_line_end", "trim_selections"]
+x = "extend_line"
 "C-u" = "extend_line_above"
+"C-f" = "flip_selections"
+
+# to insertion
+a = ["append_mode", "collapse_selection"]
+i = ["insert_mode", "collapse_selection"]
 
 [keys.insert.j]
 k = "normal_mode"
+
