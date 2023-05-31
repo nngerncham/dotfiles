@@ -22,6 +22,9 @@ vim.g.coc_global_extensions = {
   -- LaTeX
   "coc-snippets",
   "coc-vimtex",
+
+  -- Go
+  "coc-go",
 }
 
 vim.cmd[[inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()

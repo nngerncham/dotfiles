@@ -53,8 +53,8 @@ local plugins = {
 	-- autocompletion
 	{'neoclide/coc.nvim', branch = 'release'},
 	"scalameta/nvim-metals",
-	"vim-autoformat/vim-autoformat",
 	"windwp/nvim-autopairs",
+	"mhartington/formatter.nvim",
 
 	-- LaTeX
 	"lervag/vimtex",
