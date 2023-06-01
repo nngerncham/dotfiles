@@ -4,6 +4,15 @@ snippet beg "Begin environment" bA
 \end{$1}
 endsnippet
 
+snippet Hfig "Figure environment with [H] option" bA
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{$0}
+	\caption{Caption}
+	\label{fig:my_label}
+\end{figure}
+endsnippet
+
 snippet fig "Figure environment" bA
 \begin{figure}[h]
 	\centering
@@ -58,9 +67,11 @@ snippet aln "Aligned equation" bA
 endsnippet
 
 snippet aaln "Anonymous aligned equation" bA
-$$ \begin{aligned}
+\[
+\begin{aligned}
 	$0
-\end{aligned} $$
+\end{aligned}
+\]
 endsnippet
 
 snippet eqn "Equation" bA
@@ -92,7 +103,11 @@ snippet \abs "Absolute" iA
 endsnippet
 
 snippet \defset "Set" iA
-\left\{$0\right\}
+\left\\{$0\right\\}
+endsnippet
+
+snippet \exists "Exists" iA
+\ \exists \ 
 endsnippet
 
 snippet mbr "Set of real numbers" iA
