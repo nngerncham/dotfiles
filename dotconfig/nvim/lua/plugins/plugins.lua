@@ -40,8 +40,8 @@ local plugins = {
 
     -- git
     "airblade/vim-gitgutter",
-    "f-person/git-blame.nvim",
     "tpope/vim-fugitive",
+    "APZelos/blamer.nvim",
 
     -- file trees
     "nvim-tree/nvim-web-devicons",
@@ -85,6 +85,7 @@ local plugins = {
 
     "rust-lang/rust.vim",
     "simrat39/rust-tools.nvim",
+    'rust-lang/rust.vim',
 
     "scalameta/nvim-metals",
 
