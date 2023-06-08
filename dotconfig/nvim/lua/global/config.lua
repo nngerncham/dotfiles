@@ -4,18 +4,33 @@ local opt = vim.opt
 opt.syntax = "on"
 opt.background = "dark"
 opt.cursorline = true
+opt.nu = true
+opt.relativenumber = true
 
-vim.cmd[[set t_Co=256]]
-vim.cmd[[colorscheme kanagawa]]
-vim.cmd[[set cc=80]]
-vim.cmd[[set number relativenumber]]
+-- colors
+vim.cmd.colorscheme("kanagawa")
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+opt.termguicolors = true
 
 -- indentation
 opt.tabstop = 4
 opt.shiftwidth = 4
-vim.cmd[[set autoindent]]
-vim.cmd[[set smartindent]]
-vim.cmd[[set wildmode=longest,list]]
-vim.cmd[[filetype plugin indent on]]
+opt.softtabstop = 4
+opt.expandtab = true
+opt.smartindent = true
+opt.autoindent = true
+opt.wrap = true
 
-vim.cmd[[autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o]]
+-- backups
+opt.swapfile = false
+opt.backup = false
+opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+opt.undofile = true
+
+-- search
+opt.incsearch = true
+
+-- misc
+opt.scrolloff = 5
+opt.updatetime = 50
