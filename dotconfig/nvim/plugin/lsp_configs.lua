@@ -1,12 +1,14 @@
-require("mason").setup()
+require("mason").setup({
+})
 require("mason-lspconfig").setup({
     ensure_installed = {
         "lua_ls",
         "rust_analyzer",
         "gopls",
-        "pylsp",
+        "pyright",
         "texlab",
-    }
+        "marksman",
+    },
 })
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -20,8 +22,6 @@ local on_attach = function(_, bufnr)
     vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 end
 
-local util = require("lspconfig/util")
-
 -- Lua
 require("lspconfig").lua_ls.setup({
     on_attach = on_attach,
@@ -29,13 +29,20 @@ require("lspconfig").lua_ls.setup({
 })
 
 -- Python
-require("lspconfig").pylsp.setup({
+require("lspconfig").pyright.setup({
     on_attach = on_attach,
-    capabilities = capabilities
+    capabilities = capabilities,
+    filetypes = { "python" }
 })
 
 -- LaTeX
 require("lspconfig").texlab.setup({
+    on_attach = on_attach,
+    capabilities = capabilities
+})
+
+-- Markdown
+require("lspconfig").marksman.setup({
     on_attach = on_attach,
     capabilities = capabilities
 })

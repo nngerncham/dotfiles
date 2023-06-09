@@ -1,97 +1,103 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-    vim.fn.system({
-        "git",
-        "clone",
-        "--filter=blob:none",
-        "https://github.com/folke/lazy.nvim.git",
-        "--branch=stable", -- latest stable release
-        lazypath,
-    })
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
 end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-    -- plugin manager
-    "folke/lazy.nvim",
-    "nvim-lua/plenary.nvim",
+	-- plugin manager
+	"folke/lazy.nvim",
+	"nvim-lua/plenary.nvim",
 
-    -- themes
-    "rebelot/kanagawa.nvim",
+	-- themes
+	"rebelot/kanagawa.nvim",
 
-    -- appearances
-    "mhinz/vim-startify",
-    "romgrk/barbar.nvim",
-    "andrewferrier/wrapping.nvim",
+	-- appearances
+	"mhinz/vim-startify",
+	"romgrk/barbar.nvim",
+	"andrewferrier/wrapping.nvim",
 
-    -- airline
-    "vim-airline/vim-airline",
-    "vim-airline/vim-airline-themes",
+	-- airline
+	"vim-airline/vim-airline",
+	"vim-airline/vim-airline-themes",
 
-    -- helpers
-    "folke/which-key.nvim",
+	-- helpers
+	"folke/which-key.nvim",
 
-    -- navigation
-    "nvim-telescope/telescope.nvim",
-    "LinArcX/telescope-command-palette.nvim",
+	-- navigation
+	"nvim-telescope/telescope.nvim",
+	"LinArcX/telescope-command-palette.nvim",
+	{ "alexghergh/nvim-tmux-navigation", lazy = false },
 
-    -- commenting
-    "preservim/nerdcommenter",
+	-- commenting
+	"preservim/nerdcommenter",
 
-    -- git
-    "airblade/vim-gitgutter",
-    "tpope/vim-fugitive",
-    "APZelos/blamer.nvim",
+	-- git
+	"airblade/vim-gitgutter",
+	"tpope/vim-fugitive",
+	"APZelos/blamer.nvim",
 
-    -- file trees
-    "nvim-tree/nvim-web-devicons",
-    "MunifTanjim/nui.nvim",
-    { "nvim-neo-tree/neo-tree.nvim", branch = "v2.x" },
+	-- file trees
+	"nvim-tree/nvim-web-devicons",
+	"MunifTanjim/nui.nvim",
+	{ "nvim-neo-tree/neo-tree.nvim", branch = "v2.x" },
 
-    -- autocompletion + LSPs
-    "neovim/nvim-lspconfig",
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
+	-- autocompletion + LSPs
+	"neovim/nvim-lspconfig",
+	"williamboman/mason.nvim",
+	"williamboman/mason-lspconfig.nvim",
+	"jay-babu/mason-null-ls.nvim",
 
-    "hrsh7th/cmp-nvim-lsp",
-    "hrsh7th/cmp-buffer",
-    "hrsh7th/cmp-path",
-    "hrsh7th/cmp-cmdline",
-    "hrsh7th/nvim-cmp",
+	"hrsh7th/nvim-cmp",
+	"hrsh7th/cmp-nvim-lsp",
+	"hrsh7th/cmp-buffer",
+	"hrsh7th/cmp-path",
+	"hrsh7th/cmp-cmdline",
 
-    "SirVer/ultisnips",
-    "quangnguyen30192/cmp-nvim-ultisnips",
+	"onsails/lspkind.nvim",
 
-    -- good utils
-    "windwp/nvim-autopairs",
-    "mbbill/undotree",
+	"jose-elias-alvarez/null-ls.nvim",
 
-    "kevinhwang91/nvim-bqf",
-    "folke/trouble.nvim",
+	"SirVer/ultisnips",
+	"quangnguyen30192/cmp-nvim-ultisnips",
 
-    "kylechui/nvim-surround",
+	-- good utils
+	"windwp/nvim-autopairs",
+	"mbbill/undotree",
 
-    -- tree-sitter
-    {
-        "nvim-treesitter/nvim-treesitter",
-        build = function()
-            require("nvim-treesitter.install").update({ with_sync = true })
-        end,
-    },
-    "nvim-treesitter/playground",
+	"kevinhwang91/nvim-bqf",
+	"folke/trouble.nvim",
 
-    -- plugins for specific languages
-    "lervag/vimtex",
+	"kylechui/nvim-surround",
 
-    "rust-lang/rust.vim",
-    "simrat39/rust-tools.nvim",
-    'rust-lang/rust.vim',
+	-- tree-sitter
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = function()
+			require("nvim-treesitter.install").update({ with_sync = true })
+		end,
+	},
+	"nvim-treesitter/playground",
 
-    "scalameta/nvim-metals",
+	-- plugins for specific languages
+	"lervag/vimtex",
 
-    -- debugger
-    "mfussenegger/nvim-dap",
-    "rcarriga/nvim-dap-ui",
+	"rust-lang/rust.vim",
+	"simrat39/rust-tools.nvim",
+
+	"scalameta/nvim-metals",
+
+	-- debugger
+	"mfussenegger/nvim-dap",
+	"rcarriga/nvim-dap-ui",
+	{ "mfussenegger/nvim-dap-python" },
 }
 
 local opts = {}
