@@ -1,3 +1,4 @@
 *.pdf
 .DS_Store
 .virtualenvs
+__pycache__
