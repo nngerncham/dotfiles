@@ -3,16 +3,16 @@ import:
 
 font:
   normal:
-    family: JetBrainsMonoNL Nerd Font Mono
+    family: JetBrainsMono Nerd Font
 
   bold:
-    family: JetBrainsMonoNL Nerd Font Mono
+    family: JetBrainsMono Nerd Font
 
   italic:
-    family: JetBrainsMonoNL Nerd Font Mono
+    family: JetBrainsMono Nerd Font
 
   bold_italic:
-    family: JetBrainsMonoNL Nerd Font Mono
+    family: JetBrainsMono Nerd Font
 
   size: 13
 
