@@ -25,8 +25,9 @@ local plugins = {
 	"andrewferrier/wrapping.nvim",
 
 	-- airline
-	"vim-airline/vim-airline",
-	"vim-airline/vim-airline-themes",
+	-- "vim-airline/vim-airline",
+	-- "vim-airline/vim-airline-themes",
+    "nvim-lualine/lualine.nvim",
 
 	-- helpers
 	"folke/which-key.nvim",

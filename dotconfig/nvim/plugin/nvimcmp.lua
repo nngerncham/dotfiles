@@ -17,8 +17,8 @@ cmp.setup({
         ["<C-p>"] = cmp.mapping.select_prev_item(),
     }),
     sources = cmp.config.sources({
-        { name = 'nvim_lsp' },
-        { name = 'ultisnips' },
+        { name = "nvim_lsp" },
+        { name = "ultisnips" },
         { name = "treesitter" },
         { name = "path" },
         {
