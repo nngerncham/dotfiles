@@ -39,7 +39,7 @@ require("lspconfig").pyright.setup({
 require("lspconfig").texlab.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
-	filetypes = { "latex" },
+	filetypes = { "latex", "tex", "bib" },
 })
 
 -- Markdown

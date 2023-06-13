@@ -11,10 +11,14 @@ map("v", "<C-k>", ":m '<-2<CR>gv=gv", options)
 
 map("n", "J", "mzJ`z", options)
 
--- skipping lines
+-- navigation
 map("n", "ge", "<S-g>", options)
 map("n", "gl", "<S-$>", options)
 map("n", "gh", "0", options)
+
+map("v", "ge", "<S-g>", options)
+map("v", "gl", "<S-$>", options)
+map("v", "gh", "0", options)
 
 -- returning to normal
 map("i", "jk", "<esc>", options)

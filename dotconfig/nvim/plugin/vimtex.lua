@@ -23,6 +23,15 @@ vim.cmd([[let g:vimtex_syntax_conceal = {
           \}]])
 
 vim.g.vimtex_compiler_method = "latexmk"
+vim.cmd([[let g:vimtex_compiler_latexmk = { 
+        \ 'executable' : 'latexmk',
+        \ 'options' : [ 
+        \   '-xelatex',
+        \   '-file-line-error',
+        \   '-synctex=1',
+        \   '-interaction=nonstopmode',
+        \ ],
+        \}]])
 vim.g.Tex_DefaultTargetFormat = "pdf"
 vim.g.Tex_ViewRule_pdf = "zathura"
 
