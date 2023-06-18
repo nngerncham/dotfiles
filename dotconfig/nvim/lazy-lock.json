@@ -39,7 +39,7 @@
   "ultisnips": { "branch": "master", "commit": "0ad238b1910d447476b2d98f593322c1cdb71285" },
   "undotree": { "branch": "master", "commit": "485f01efde4e22cb1ce547b9e8c9238f36566f21" },
   "vim-fugitive": { "branch": "master", "commit": "5f0d280b517cacb16f59316659966c7ca5e2bea2" },
-  "vim-gitgutter": { "branch": "master", "commit": "e2056e54c50c6f3fbf386108eeb013e2a7f14ae3" },
+  "vim-gitgutter": { "branch": "main", "commit": "e2056e54c50c6f3fbf386108eeb013e2a7f14ae3" },
   "vim-startify": { "branch": "master", "commit": "81e36c352a8deea54df5ec1e2f4348685569bed2" },
   "vimtex": { "branch": "master", "commit": "127c0a2ec8c6ca5f4c33902f004d302bd88a7c3e" },
   "which-key.nvim": { "branch": "main", "commit": "e271c28118998c93a14d189af3395812a1aa646c" },
