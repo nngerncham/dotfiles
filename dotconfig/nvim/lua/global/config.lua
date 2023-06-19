@@ -21,6 +21,7 @@ opt.expandtab = true
 opt.smartindent = true
 opt.autoindent = true
 opt.wrap = true
+opt.linebreak = true
 
 -- backups
 opt.swapfile = false

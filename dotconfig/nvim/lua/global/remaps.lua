@@ -40,3 +40,6 @@ end, { noremap = true, desc = "Format current files" })
 
 -- quickfix
 map("n", "co", ":copen<CR>", { noremap = true, desc = "Open quick fixes" })
+
+-- save
+map("i", "<C-s>", "<cmd>w<cr>", options)

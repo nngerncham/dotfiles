@@ -22,7 +22,6 @@ local plugins = {
 	-- appearances
 	"mhinz/vim-startify",
 	"romgrk/barbar.nvim",
-	"andrewferrier/wrapping.nvim",
 
 	-- airline
 	-- "vim-airline/vim-airline",
@@ -89,6 +88,7 @@ local plugins = {
 
 	-- plugins for specific languages
 	"lervag/vimtex",
+    "anufrievroman/vim-angry-reviewer",
 
 	"rust-lang/rust.vim",
 	"simrat39/rust-tools.nvim",
@@ -98,7 +98,7 @@ local plugins = {
 	-- debugger
 	"mfussenegger/nvim-dap",
 	"rcarriga/nvim-dap-ui",
-	{ "mfussenegger/nvim-dap-python" },
+	"mfussenegger/nvim-dap-python",
 }
 
 local opts = {}
