@@ -2,3 +2,4 @@
 .DS_Store
 .virtualenvs
 __pycache__
+dotconfig/tmux/plugins
