@@ -8,3 +8,4 @@ alias hx='helix'
 
 # init-ing stuff
 pyenv init - | source
+export NVM_DIR="$HOME/.nvm"
