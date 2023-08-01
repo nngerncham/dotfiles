@@ -1,0 +1,17 @@
+set nu
+set relativenumber
+
+nmap j gj
+nmap k gk
+imap jk <esc>
+
+nmap ge <S-g>
+nmap gl $
+nmap gh 0
+
+vmap ge <S-g>
+vmap gl <S-$>
+vmap gh 0
+vmap JK <C-\\><C-n>
+
+nmap U <C-r>

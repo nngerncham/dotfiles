@@ -2,10 +2,15 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-# aliases
-alias nv='nvim'
-alias hx='helix'
+alias nv="nvim"
 
-# init-ing stuff
-pyenv init - | source
-export NVM_DIR="$HOME/.nvm"
+# MacOS specific
+if [ $(uname) != "Darwin" ]
+    alias hx="helix"
+else 
+    fish_add_path "/Users/nawat/.cargo/bin"
+    fish_add_path "/Users/nawat/Library/Application\ Support/JetBrains/Toolbox/scripts"
+    fish_add_path "/opt/homebrew/bin"
+    fish_add_path "Users/nawat/.local/bin"
+end
+
