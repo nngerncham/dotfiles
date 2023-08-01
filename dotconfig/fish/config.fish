@@ -9,7 +9,7 @@ export EDITOR="nvim"
 if [ $(uname) != "Darwin" ]
     alias hx="helix"
 
-    export "PYENV_ROOT:/home/nawat/.pyenv"
+    export PYENV_ROOT="/home/nawat/.pyenv"
     pyenv init - | source
 
     export NVM_DIR="$Home/.nvm"
