@@ -9,4 +9,5 @@ do
     full_path="$HOME/.config/$fn"
     cp -r "$full_path" "$full_path.backup"
 done
-# cp -r dotconfig/* ~/.config/
+
+cp -r dotconfig/* ~/.config/
