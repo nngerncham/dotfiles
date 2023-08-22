@@ -7,6 +7,7 @@ require("mason-lspconfig").setup({
 		"pyright",
 		"texlab",
 		"marksman",
+		"clangd",
 	},
 })
 
@@ -47,4 +48,18 @@ require("lspconfig").marksman.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 	filetypes = { "markdown" },
+})
+
+-- C/C++
+require("lspconfig").clangd.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	filetypes = { "c", "cpp" },
+})
+
+-- Go
+require("lspconfig").gopls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	filetypes = { "go" },
 })
