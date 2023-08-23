@@ -24,8 +24,6 @@ local plugins = {
 	"romgrk/barbar.nvim",
 
 	-- airline
-	-- "vim-airline/vim-airline",
-	-- "vim-airline/vim-airline-themes",
     "nvim-lualine/lualine.nvim",
 
 	-- helpers
@@ -54,6 +52,7 @@ local plugins = {
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
 	"jay-babu/mason-null-ls.nvim",
+    "lvimuser/lsp-inlayhints.nvim",
 
 	"hrsh7th/nvim-cmp",
 	"hrsh7th/cmp-nvim-lsp",
