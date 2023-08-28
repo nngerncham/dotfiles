@@ -11,3 +11,4 @@ do
 done
 
 cp -r dotconfig/* ~/.config/
+cp tohome/.ideavimrc ~/
