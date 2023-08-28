@@ -15,3 +15,6 @@ vmap gh 0
 vmap JK <C-\\><C-n>
 
 nmap U <C-r>
+
+map <C-L> <C-W>l
+map <C-H> <C-W>h
