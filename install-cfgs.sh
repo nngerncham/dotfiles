@@ -10,5 +10,6 @@ do
     cp -r "$full_path" "$full_path.backup"
 done
 
+rm -rf ~/.config/*.backup
 cp -r dotconfig/* ~/.config/
 cp tohome/.ideavimrc ~/
