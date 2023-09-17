@@ -20,6 +20,6 @@ null_ls.setup({
 		null_ls.builtins.diagnostics.ruff,
 		null_ls.builtins.formatting.black,
 
-        null_ls.builtins.formatting.hadolint,
+        null_ls.builtins.diagnostics.hadolint,
 	},
 })
