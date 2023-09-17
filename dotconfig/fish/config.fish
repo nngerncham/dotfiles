@@ -24,12 +24,13 @@ else
     export PYENV_ROOT="/Users/nawat/.pyenv"
 
     fish_add_path "/opt/homebrew/bin"
+    fish_add_path "$(brew --prefix)/opt/coreutils/libexec/gnubin"
     fish_add_path "/Users/nawat/.cargo/bin"
     fish_add_path "/Users/nawat/.local/bin"
 
     fish_add_path "/Users/nawat/Library/Application\ Support/JetBrains/Toolbox/scripts"
 
-    fish_add_path "/Users/nawat/.local/share/nvm/v20.5.1/bin/node"
+    fish_add_path "/Users/nawat/.local/share/nvm/v20.6.1/bin"
 
     pyenv init - | source
 end
