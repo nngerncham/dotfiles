@@ -40,7 +40,7 @@ local plugins = {
 	-- git
 	"airblade/vim-gitgutter",
 	"tpope/vim-fugitive",
-	"APZelos/blamer.nvim",
+    "APZelos/blamer.nvim",
 
 	-- file trees
 	"nvim-tree/nvim-web-devicons",

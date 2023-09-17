@@ -5,9 +5,13 @@ require("mason-lspconfig").setup({
 		"rust_analyzer",
 		"gopls",
 		"pyright",
-		"texlab",
-		"marksman",
 		"clangd",
+
+		"marksman",
+		"texlab",
+
+		"dockerls",
+		"docker_compose_language_service",
 	},
 })
 
@@ -23,12 +27,12 @@ local on_attach = function(_, bufnr)
 end
 
 vim.diagnostic.config({
-  virtual_text = false
+	virtual_text = false,
 })
 
 -- Show line diagnostics automatically in hover window
 vim.o.updatetime = 250
-vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]])
 
 require("lsp-inlayhints").setup()
 vim.api.nvim_create_augroup("LspAttach_inlayhints", {})
