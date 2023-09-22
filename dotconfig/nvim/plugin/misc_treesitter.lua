@@ -1,6 +1,6 @@
 require 'nvim-treesitter.configs'.setup {
     -- A list of parser names, or "all" (the five listed parsers should always be installed)
-    ensure_installed = { "c", "lua", "vimdoc", "query", "cpp", "rust", "python", "go", "latex" },
+    ensure_installed = { "c", "lua", "vimdoc", "query", "cpp", "rust", "python", "go", "latex", "toml" },
 
     -- Install parsers synchronously (only applied to `ensure_installed`)
     sync_install = false,
@@ -15,3 +15,6 @@ require 'nvim-treesitter.configs'.setup {
         additional_vim_regex_highlighting = false,
     },
 }
+
+vim.wo.foldmethod = 'expr'
+vim.wo.foldexpr = 'nvim_tresitter#foldexpr()'

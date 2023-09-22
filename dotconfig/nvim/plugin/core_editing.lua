@@ -30,6 +30,7 @@ cmp.setup({
 			},
 		},
 		{ name = "spell" },
+		{ name = "crates" },
 	}),
 	window = {
 		completion = cmp.config.window.bordered(),
@@ -103,4 +104,28 @@ cmp.setup({
 	},
 })
 
+-- autopairs
 require("nvim-autopairs").setup()
+
+-- nerdcommenter
+vim.g.NERDSpaceDelims = 1
+vim.g.NERDDefaultAlign = "left"
+vim.g.NERDToggleCheckAllLines = 1
+
+local map = vim.api.nvim_set_keymap
+local opts = { noremap = true, desc = "Toggle comment of selected line" }
+
+map("n", "++", "<plug>NERDCommenterToggle", opts)
+map("v", "++", "<plug>NERDCommenterToggle", opts)
+
+-- surround
+require("nvim-surround").setup({})
+
+local Rule = require("nvim-autopairs.rule")
+local npairs = require("nvim-autopairs")
+
+npairs.add_rule(Rule("\\(", "\\)", { "tex" }))
+npairs.add_rule(Rule("\\[", "\\]", { "tex" }))
+
+-- undotree
+vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)

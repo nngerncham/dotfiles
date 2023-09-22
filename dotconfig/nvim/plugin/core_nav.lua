@@ -1,3 +1,4 @@
+-- Telescope
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>F', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.git_files, {})
@@ -45,5 +46,20 @@ require('telescope').setup({
     }
   }
 })
+
 require("telescope").load_extension("command_palette")
 vim.keymap.set('n', '<leader>cp', "<cmd>Telescope command_palette<CR>", {})
+
+-- tmuxnav
+local nvim_tmux_nav = require('nvim-tmux-navigation')
+
+nvim_tmux_nav.setup {
+    disable_when_zoomed = true         -- defaults to false
+}
+
+vim.keymap.set('n', "<C-h>", nvim_tmux_nav.NvimTmuxNavigateLeft)
+vim.keymap.set('n', "<C-j>", nvim_tmux_nav.NvimTmuxNavigateDown)
+vim.keymap.set('n', "<C-k>", nvim_tmux_nav.NvimTmuxNavigateUp)
+vim.keymap.set('n', "<C-l>", nvim_tmux_nav.NvimTmuxNavigateRight)
+vim.keymap.set('n', "<C-\\>", nvim_tmux_nav.NvimTmuxNavigateLastActive)
+vim.keymap.set('n', "<C-Space>", nvim_tmux_nav.NvimTmuxNavigateNext)

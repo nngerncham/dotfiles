@@ -24,7 +24,7 @@ local plugins = {
 	"romgrk/barbar.nvim",
 
 	-- airline
-    "nvim-lualine/lualine.nvim",
+	"nvim-lualine/lualine.nvim",
 
 	-- helpers
 	"folke/which-key.nvim",
@@ -40,7 +40,7 @@ local plugins = {
 	-- git
 	"airblade/vim-gitgutter",
 	"tpope/vim-fugitive",
-    "APZelos/blamer.nvim",
+	"APZelos/blamer.nvim",
 
 	-- file trees
 	"nvim-tree/nvim-web-devicons",
@@ -52,7 +52,8 @@ local plugins = {
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
 	"jay-babu/mason-null-ls.nvim",
-    "lvimuser/lsp-inlayhints.nvim",
+	"lvimuser/lsp-inlayhints.nvim",
+	"jose-elias-alvarez/null-ls.nvim",
 
 	"hrsh7th/nvim-cmp",
 	"hrsh7th/cmp-nvim-lsp",
@@ -61,8 +62,6 @@ local plugins = {
 	"hrsh7th/cmp-cmdline",
 
 	"onsails/lspkind.nvim",
-
-	"jose-elias-alvarez/null-ls.nvim",
 
 	"SirVer/ultisnips",
 	"quangnguyen30192/cmp-nvim-ultisnips",
@@ -87,17 +86,18 @@ local plugins = {
 
 	-- plugins for specific languages
 	"lervag/vimtex",
-    "anufrievroman/vim-angry-reviewer",
+	"anufrievroman/vim-angry-reviewer",
 
 	"rust-lang/rust.vim",
 	"simrat39/rust-tools.nvim",
-
-	"scalameta/nvim-metals",
+	"saecki/crates.nvim",
 
 	-- debugger
 	"mfussenegger/nvim-dap",
+    "ldelossa/nvim-dap-projects",
+    "folke/neodev.nvim",
 	"rcarriga/nvim-dap-ui",
-	"mfussenegger/nvim-dap-python",
+	"theHamsta/nvim-dap-virtual-text",
 }
 
 local opts = {}
