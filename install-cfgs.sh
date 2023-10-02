@@ -4,12 +4,14 @@ if [ -d "~/.tmux/plugins/tpm" ]; then
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi
 
+rm -rf ~/.config/*.backup
+
 for fn in alacritty fish helix i3 nvim tmux;
 do
     full_path="$HOME/.config/$fn"
     cp -r "$full_path" "$full_path.backup"
 done
 
-rm -rf ~/.config/*.backup
 cp -r dotconfig/* ~/.config/
+cp -r layouts ~/.tmuxifier/
 cp tohome/.ideavimrc ~/
