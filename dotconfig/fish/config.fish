@@ -27,12 +27,14 @@ else
     fish_add_path "$(brew --prefix)/opt/coreutils/libexec/gnubin"
     fish_add_path "/Users/nawat/.cargo/bin"
     fish_add_path "/Users/nawat/.local/bin"
+    fish_add_path "/Users/nawat/.tmuxifier/bin"
 
     fish_add_path "/Users/nawat/Library/Application\ Support/JetBrains/Toolbox/scripts"
 
     fish_add_path "/Users/nawat/.local/share/nvm/v20.6.1/bin"
 
     pyenv init - | source
+    eval (tmuxifier init - fish)
 end
 
 starship init fish | source
