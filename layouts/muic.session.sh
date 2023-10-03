@@ -12,6 +12,10 @@ if initialize_session "muic"; then
   new_window "scl"
   run_cmd "cd ~/muic/cs371_scalable"
   run_cmd "clear"
+
+  new_window "sen"
+  run_cmd "cd ~/muic/senior"
+  run_cmd "clear"
 fi
 
 finalize_and_go_to_session
