@@ -29,9 +29,10 @@ else
     fish_add_path "/Users/nawat/.local/bin"
     fish_add_path "/Users/nawat/.tmuxifier/bin"
 
-    fish_add_path "/Users/nawat/Library/Application\ Support/JetBrains/Toolbox/scripts"
+    fish_add_path "/Users/nawat/Library/Application Support/JetBrains/Toolbox/scripts"
 
     fish_add_path "/Users/nawat/.local/share/nvm/v20.6.1/bin"
+    fish_add_path "/Users/nawat/Library/Application Support/Coursier/bin"
 
     pyenv init - | source
     eval (tmuxifier init - fish)
