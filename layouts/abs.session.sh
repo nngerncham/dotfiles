@@ -1,22 +1,16 @@
 # Set a custom session root path. Default is `$HOME`.
 # Must be called before `initialize_session`.
-session_root "/User/nawat/muic/cs371_scalable/p4/"
+#session_root "~/Projects/abs"
 
 # Create session with specified name if it does not already exist. If no
 # argument is given, session name will be based on layout file name.
-if initialize_session "scl"; then
+if initialize_session "abs"; then
 
-  # Create a new window inline within session layout definition.
-  new_window "be-ord"
-  split_h 50
+  new_window "notes"
+  run_cmd "cd ~/muic/ma424_abstract/notes/"
 
-  new_window "pay-inv"
-  split_h 50
-
-  new_window "deli"
-  split_h 50
-
-  new_window "deploy"
+  new_window "homework"
+  run_cmd "cd ~/muic/ma424_abstract/homework/"
 
   select_window 1
 
