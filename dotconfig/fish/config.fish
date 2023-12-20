@@ -2,22 +2,28 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-alias nv="nvim"
-export EDITOR="nvim"
+alias nv="lvim"
+export EDITOR="lvim"
 
 # Linux stuff
 if [ $(uname) != "Darwin" ]
     alias hx="helix"
-
-    export PYENV_ROOT="/home/nawat/.pyenv"
-    pyenv init - | source
 
     export NVM_DIR="$HOME/.nvm"
     fish_add_path "/home/nawat/.local/share/JetBrains/Toolbox/scripts"
     fish_add_path "/home/nawat/.tmuxifier/bin"
     fish_add_path "/home/nawat/.local/bin"
     fish_add_path "/usr/local/texlive/2023/bin/x86_64-linux"
-    fish_add_path "/home/nawat/.pyenv/bin"
+    fish_add_path "/home/nawat/go/bin"
+
+    export XDG_DATA_DIRS="/var/lib/flatpak/exports/share:/home/nawat/.local/share/flatpak/exports/share:$XDG_DATA_DIRS"
+    
+    # if venv not set, then add pyenv to path
+    if test -z "$VIRTUAL_ENV"
+        export PYENV_ROOT="/home/nawat/.pyenv"
+        fish_add_path "/home/nawat/.pyenv/bin"
+        pyenv init - | source
+    end
 
 # MacOS stuff
 else 
@@ -27,15 +33,12 @@ else
     fish_add_path "$(brew --prefix)/opt/coreutils/libexec/gnubin"
     fish_add_path "/Users/nawat/.cargo/bin"
     fish_add_path "/Users/nawat/.local/bin"
-    fish_add_path "/Users/nawat/.tmuxifier/bin"
 
-    fish_add_path "/Users/nawat/Library/Application Support/JetBrains/Toolbox/scripts"
+    fish_add_path "/Users/nawat/Library/Application\ Support/JetBrains/Toolbox/scripts"
 
     fish_add_path "/Users/nawat/.local/share/nvm/v20.6.1/bin"
-    fish_add_path "/Users/nawat/Library/Application Support/Coursier/bin"
 
     pyenv init - | source
-    eval (tmuxifier init - fish)
 end
 
 starship init fish | source
