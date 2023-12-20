@@ -1,7 +1,4 @@
-theme = "kanagawa_transparent"
-
-[editor]
-line-number = "relative"
+theme = "kanagawa"
 
 [editor.soft-wrap]
 enable = true
