@@ -1,0 +1,165 @@
+{
+  "Figure Environment": {
+    "prefix": "fig",
+    "body": [
+      "\\begin{figure}[ht]",
+      "\t\\centering",
+      "\t\\includegraphics[width=0.8\\textwidth]{$1}",
+      "\t\\caption{$2}",
+      "\t\\label{fig:$3}",
+      "\\end{figure}"
+    ],
+    "description": "Figure environment"
+  },
+  "Definition": {
+    "prefix": "dfn",
+    "body": [
+      "\\begin{definition}[$1]",
+      "\t$2",
+      "\\end{definition}"
+    ],
+    "description": "Definition"
+  },
+  "Theorem": {
+    "prefix": "thm",
+    "body": [
+      "\\begin{theorem}[$1]",
+      "\t$2",
+      "\\end{theorem}"
+    ],
+    "description": "Theorem"
+  },
+  "Claim": {
+    "prefix": "clm",
+    "body": [
+      "\\begin{claim}",
+      "\t$1",
+      "\\end{claim}"
+    ],
+    "description": "Claim"
+  },
+  "Proof": {
+    "prefix": "prf",
+    "body": [
+      "\\begin{proof}",
+      "\t$1",
+      "\\end{proof}"
+    ],
+    "description": "Proof"
+  },
+  "Anonymous Aligned Equation": {
+    "prefix": "aaln",
+    "body": [
+      "\\[",
+      "\\begin{aligned}",
+      "\t$1",
+      "\\end{aligned}",
+      "\\]"
+    ],
+    "description": "Anonymous aligned equation"
+  },
+  "Aligned Equation": {
+    "prefix": "aln",
+    "body": [
+      "\\[",
+      "\\begin{aligned}",
+      "\t$1",
+      "\\end{aligned}",
+      "\\]"
+    ],
+    "description": "Anonymous aligned equation"
+  },
+  "Equation": {
+    "prefix": "eqn",
+    "body": [
+      "\\begin{equation}\\label{eqn:$2}",
+      "\t$1",
+      "\\end{equation}"
+    ],
+    "description": "Equation"
+  },
+  "Set of natural numbers": {
+    "prefix": "\mbn",
+    "body": [
+      "\\mathbb{N}"
+    ],
+    "description": "Set of natural numbers"
+  },
+  "Set of whole numbers (integers)": {
+    "prefix": "\mbz",
+    "body": [
+      "\\mathbb{Z}"
+    ],
+    "description": "Set of whole numbers (integers)"
+  },
+  "Set of rational numbers": {
+    "prefix": "\mbq",
+    "body": [
+      "\\mathbb{Q}"
+    ],
+    "description": "Set of rational numbers"
+  },
+  "Set of real numbers": {
+    "prefix": "mbr",
+    "body": [
+      "\\mathbb{R}"
+    ],
+    "description": "Set of real numbers"
+  },
+  "Absolute": {
+    "prefix": "\\abs",
+    "body": [
+      "\\left|${1:content}\\right|"
+    ],
+    "description": "Absolute"
+  },
+  "Set": {
+    "prefix": "\\dset",
+    "body": [
+      "\\left\\{${1:content}\\right\\}"
+    ],
+    "description": "Set"
+  },
+  "Set ? over =": {
+    "prefix": "eq?",
+    "body": [
+      "\\overset{?}{=}"
+    ],
+    "description": "Set ? over ="
+  },
+  "Set ? over <=": {
+    "prefix": "leq?",
+    "body": [
+      "\\overset{?}{\\leq}"
+    ],
+    "description": "Set ? over <="
+  },
+  "Set ? over >=": {
+    "prefix": "geq?",
+    "body": [
+      "\\overset{?}{\\geq}"
+    ],
+    "description": "Set ? over >="
+  },
+  "Set ? over <": {
+    "prefix": "lt?",
+    "body": [
+      "\\overset{?}{<}"
+    ],
+    "description": "Set ? over <"
+  },
+  "Set ? over >": {
+    "prefix": "gt?",
+    "body": [
+      "\\overset{?}{>}"
+    ],
+    "description": "Set ? over >"
+  },
+  "Angle Operators": {
+    "prefix": "\\angle",
+    "body": [
+      "\\langle $1 \\rangle"
+    ],
+    "description": "{L, R}-angle operators"
+  }
+}

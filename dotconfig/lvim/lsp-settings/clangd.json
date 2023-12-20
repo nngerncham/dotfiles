@@ -1,0 +1,11 @@
+{
+  "clangd.arguments": [
+    "--log=verbose",
+    "-j=4",
+    "--background-index",
+    "--clang-tidy",
+    "--fallback-style=LLVM",
+    "--header-insertion=iwyu",
+    "--inlay-hints=true"
+  ],
+}
