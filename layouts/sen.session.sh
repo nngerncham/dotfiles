@@ -1,20 +1,18 @@
 # Set a custom session root path. Default is `$HOME`.
 # Must be called before `initialize_session`.
-#session_root "~/Projects/heu"
+session_root "/home/nawat/muic/senior/"
 
 # Create session with specified name if it does not already exist. If no
 # argument is given, session name will be based on layout file name.
-if initialize_session "heu"; then
+if initialize_session "sen"; then
 
-  new_window "lectures"
-  run_cmd "cd ~/muic/ma395_heuristic/lectures/"
-  split_h 50
-
-  new_window "report"
-  run_cmd "cd ~/muic/ma395_heuristic/homework/hw4/report/"
-
+  # Create a new window inline within session layout definition.
   new_window "code"
-  run_cmd "cd ~/muic/ma395_heuristic/homework/hw4/code/"
+  new_window "report"
+  new_window "sandbox"
+
+  # Select the default active window on session creation.
+  select_window 1
 
 fi
 
