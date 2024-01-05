@@ -10,13 +10,6 @@ fish_add_path "$HOME/.tmuxifier/bin"
 fish_add_path "$HOME/.local/bin"
 fish_add_path "$HOME/.cargo/bin"
 
-# if venv not set, then add pyenv to path
-if test -z "$VIRTUAL_ENV"
-    export PYENV_ROOT="$HOME/.pyenv"
-    fish_add_path "$HOME/.pyenv/bin"
-    pyenv init - | source
-end
-
 if [ $(uname) != Darwin ]
     # Linux stuff
     alias hx="helix"
@@ -30,13 +23,17 @@ if [ $(uname) != Darwin ]
 
 else
     # MacOS stuff
-    export PYENV_ROOT="/Users/nawat/.pyenv"
-
     fish_add_path /opt/homebrew/bin
     fish_add_path "$(brew --prefix)/opt/coreutils/libexec/gnubin"
 
     fish_add_path "/Users/nawat/Library/Application\ Support/JetBrains/Toolbox/scripts"
     fish_add_path "/Users/nawat/.local/share/nvm/v20.6.1/bin"
+end
+
+# if venv not set, then add pyenv to path
+if test -z "$VIRTUAL_ENV"
+    export PYENV_ROOT="$HOME/.pyenv"
+    pyenv init - | source
 end
 
 starship init fish | source
