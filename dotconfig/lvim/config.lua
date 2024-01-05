@@ -8,6 +8,12 @@ lvim.plugins = {
   -- themes
   { "rebelot/kanagawa.nvim" },
   { "alexmozaidze/palenight.nvim" },
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
 
   -- in-lay hints
   { "lvimuser/lsp-inlayhints.nvim" },
@@ -23,11 +29,11 @@ lvim.plugins = {
   {
     "David-Kunz/gen.nvim",
     opts = {
-      model = "mistral",        -- The default model to use.
-      display_mode = "float",   -- The display mode. Can be "float" or "split".
-      show_prompt = false,      -- Shows the Prompt submitted to Ollama.
-      show_model = false,       -- Displays which model you are using at the beginning of your chat session.
-      no_auto_close = false,    -- Never closes the window automatically.
+      model = "mistral",      -- The default model to use.
+      display_mode = "float", -- The display mode. Can be "float" or "split".
+      show_prompt = false,    -- Shows the Prompt submitted to Ollama.
+      show_model = false,     -- Displays which model you are using at the beginning of your chat session.
+      no_auto_close = false,  -- Never closes the window automatically.
       init = function(options) pcall(io.popen, "ollama serve > /dev/null 2>&1 &") end,
       -- Function to initialize Ollama
       command = "curl --silent --no-buffer -X POST http://localhost:11434/api/generate -d $body",
@@ -35,14 +41,39 @@ lvim.plugins = {
       -- This can also be a lua function returning a command string, with options as the input parameter.
       -- The executed command must return a JSON object with { response, context }
       -- (context property is optional).
-      list_models = '<omitted lua function>',   -- Retrieves a list of model names
-      debug = false                             -- Prints errors and the command which is run.
+      list_models = '<omitted lua function>', -- Retrieves a list of model names
+      debug = false                           -- Prints errors and the command which is run.
     }
+  },
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup({})
+    end,
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    config = function()
+      require("copilot_cmp").setup()
+    end,
   },
 }
 
-lvim.colorscheme = "kanagawa"
-lvim.builtin.lualine.options.theme = "modus-vivendi"
+local cmp = require('cmp')
+local config = cmp.get_config()
+table.insert(config.sources, { name = 'copilot', group_index = 2 })
+cmp.setup(config)
+
+-- Comments
+local ft = require('Comment.ft')
+ft({ "c", "cpp", "h", "go", "rust" }, "// %s")
+ft({ "yaml", "toml", "python", "graphql" }, "# %s")
+
+-- Colorscheme
+lvim.colorscheme = "palenight"
+lvim.builtin.lualine.options.theme = "palenight"
 
 -- keybinds
 lvim.keys.insert_mode["jk"] = "<esc>`^"
@@ -66,6 +97,7 @@ vim.opt.wrap = true
 vim.opt.textwidth = 80
 vim.opt.timeout = true
 vim.opt.timeoutlen = 200
+vim.opt.winbar = "%=%m %f"
 
 -- formatting
 lvim.format_on_save.enabled = true
@@ -83,7 +115,21 @@ lvim.keys.normal_mode["<C-k>"] = nvim_tmux_nav.NvimTmuxNavigateUp
 lvim.keys.normal_mode["<C-l>"] = nvim_tmux_nav.NvimTmuxNavigateRight
 
 -- inlay hints
-require("lsp-inlayhints").setup()
+require("lsp-inlayhints").setup({
+  inlay_hints = {
+    parameter_hints = {
+      prefix = " » ",
+      remove_colon_start = true,
+      remove_colon_end = true,
+    },
+    type_hints = {
+      prefix = " » ",
+      remove_colon_start = true,
+      remove_colon_end = true,
+    },
+    only_current_line = false,
+  },
+})
 vim.api.nvim_create_augroup("LspAttach_inlayhints", {})
 vim.api.nvim_create_autocmd("LspAttach", {
   group = "LspAttach_inlayhints",
