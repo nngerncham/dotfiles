@@ -96,5 +96,6 @@ alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias nv=nvim
 alias lv=lvim
+alias gcm="git commit -m"
 
 source /home/nawat/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
