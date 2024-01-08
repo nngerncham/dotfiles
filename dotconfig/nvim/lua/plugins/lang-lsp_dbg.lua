@@ -46,6 +46,7 @@ return {
           root_dir = function(fname)
             return require("lspconfig.util").root_pattern(
               "Makefile",
+              "CMakeLists.txt",
               "configure.ac",
               "configure.in",
               "config.h.in",

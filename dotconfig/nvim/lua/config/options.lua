@@ -9,6 +9,7 @@ vim.opt.textwidth = 80
 vim.opt.timeout = true
 vim.opt.timeoutlen = 200
 vim.opt.winbar = "%=%m %f"
+vim.g.root_spec = { "lsp", "cwd" }
 
 -- LaTeX
 vim.g.maplocalleader = ","
