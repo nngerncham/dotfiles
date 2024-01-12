@@ -32,6 +32,7 @@
 \usepackage{graphicx}
 \usepackage{colortbl}
 \usepackage{caption}
+\usepackage{subcaption}
 
 \usepackage[breakable,skins]{tcolorbox}
 \usepackage{framed}
@@ -47,12 +48,22 @@
 
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
 
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
 \newtheorem{claim}[theorem]{Claim}
 \newtheorem{fact}[theorem]{Fact}
-\newtheorem{algorithm}[theorem]{Algorithm}
+
+\usepackage{algorithm}
+\usepackage[indLines=true]{algpseudocodex}
+\usepackage{algorithmicx}
+\algnewcommand\algorithmicinput{\textbf{Input:}}
+\algnewcommand\Input{\item[\algorithmicinput]}
+\algrenewcommand\algorithmicoutput{\textbf{Output:}}
+\algrenewcommand\Output{\item[\algorithmicoutput]}
+\algrenewcommand\algorithmicrequire{\textbf{Require:}}
+\algrenewcommand\Require{\item[\algorithmicrequire]}
 
 % --- SELF-DEFINED ENVIRONMENTS ---
 \newenvironment{hwproblem}[2]{

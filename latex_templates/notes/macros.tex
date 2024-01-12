@@ -4,12 +4,11 @@
 \newcommand{\ExSub}[2]{\mathbb{E}_#2\left[#1\right]}
 \newcommand{\CEx}[2]{\mathbb{E}\left[#1\ |\ #2\right]}
 
-\newenvironment{nexample}[1][]{
-    \begin{leftbar}
-        \begin{example}[#1]
+\newenvironment{nexample}{
+  \begin{leftbar}
+    \noindent\textbf{Example.}
 }{
-        \end{example}
-    \end{leftbar}
+  \end{leftbar}
 }
 
 \newenvironment{distraction}{
