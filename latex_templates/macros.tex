@@ -7,3 +7,25 @@
 \newcommand{\Exp}[1]{\text{Exp}\left(#1\right)}
 \newcommand{\Pois}[1]{\text{Poisson}\left(#1\right)}
 \newcommand{\DGamma}[2]{\text{Gamma}\left(#1, #2\right)}
+
+% === SELF-DEFINED ENVIRONMENTS OPERATORS ===
+\newenvironment{nexample}{
+  \begin{leftbar}
+    \noindent\textbf{Example.}
+}{
+  \end{leftbar}
+}
+
+\newenvironment{distraction}{
+    \begin{tcolorbox}[title=Distraction!,breakable,colframe=red!69!black,before upper={\parindent15pt}]
+}{
+    \end{tcolorbox}
+}
+
+\newenvironment{hwproblem}[2]{
+	\noindent\textbf{Problem #1.} #2
+
+	\begin{framed}
+}{
+	\end{framed}
+}
