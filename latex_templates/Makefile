@@ -1,5 +1,5 @@
 all:
-	latexmk -pdf template.tex
+	latexmk -pdf main.tex
 
 clean:
 	latexmk -c

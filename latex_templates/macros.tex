@@ -26,10 +26,17 @@
     \end{tcolorbox}
 }
 
-\newenvironment{hwproblem}[2]{
-	\noindent\textbf{Problem #1.} #2
+\newenvironment{hwproblem}[1]{\noindent\textbf{Problem #1.}}{}
+\newmdenv[linewidth=0.5pt,linecolor=black,backgroundcolor=white]{singleframed}
+\newenvironment*{singleframedindent}{
+  \begin{singleframed}
+    \setlength{\parindent}{\defparindent}\ignorespaces
+  }{
+  \end{singleframed}
+}
 
-	\begin{framed}
-}{
-	\end{framed}
+\newcommand\sol[1]{
+  \begin{singleframedindent}
+    #1
+  \end{singleframedindent}
 }
