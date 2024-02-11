@@ -27,7 +27,7 @@ return {
       vim.g.vimtex_mappings_disable = { ["n"] = { "K" } } -- disable `K` as it conflicts with LSP hover
     end,
     keys = {
-      { "<localLeader>q", "<cmd>!zathura template.pdf &<CR>" },
+      { "<localLeader>q", "<cmd>!zathura main.pdf &<CR>" },
     },
   },
   { "anufrievroman/vim-angry-reviewer" },
