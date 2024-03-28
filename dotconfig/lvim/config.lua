@@ -45,26 +45,26 @@ lvim.plugins = {
       debug = false                           -- Prints errors and the command which is run.
     }
   },
-  {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    event = "InsertEnter",
-    config = function()
-      require("copilot").setup({})
-    end,
-  },
-  {
-    "zbirenbaum/copilot-cmp",
-    config = function()
-      require("copilot_cmp").setup()
-    end,
-  },
+  -- {
+  --   "zbirenbaum/copilot.lua",
+  --   cmd = "Copilot",
+  --   event = "InsertEnter",
+  --   config = function()
+  --     require("copilot").setup({})
+  --   end,
+  -- },
+  -- {
+  --   "zbirenbaum/copilot-cmp",
+  --   config = function()
+  --     require("copilot_cmp").setup()
+  --   end,
+  -- },
 }
 
-local cmp = require('cmp')
-local config = cmp.get_config()
-table.insert(config.sources, { name = 'copilot', group_index = 2 })
-cmp.setup(config)
+-- local cmp = require('cmp')
+-- local config = cmp.get_config()
+-- table.insert(config.sources, { name = 'copilot', group_index = 2 })
+-- cmp.setup(config)
 
 -- Comments
 local ft = require('Comment.ft')
@@ -84,17 +84,19 @@ lvim.keys.normal_mode["k"] = "gk"
 lvim.keys.normal_mode["ge"] = "<S-g>"
 lvim.keys.normal_mode["gh"] = "_"
 lvim.keys.normal_mode["gl"] = "g_"
+lvim.keys.normal_mode["<S-u>"] = "<C-r>"
 
 lvim.keys.visual_mode["j"] = "gj"
 lvim.keys.visual_mode["k"] = "gk"
 lvim.keys.visual_mode["ge"] = "<S-g>"
 lvim.keys.visual_mode["gh"] = "_"
 lvim.keys.visual_mode["gl"] = "g_"
+lvim.keys.visual_mode["<S-u>"] = "<C-r>"
 
 -- options
 vim.opt.swapfile = false
 vim.opt.wrap = true
-vim.opt.textwidth = 80
+vim.opt.textwidth = 65
 vim.opt.timeout = true
 vim.opt.timeoutlen = 200
 vim.opt.winbar = "%=%m %f"
@@ -146,7 +148,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 -- LaTeX
 vim.g.maplocalleader = ","
-lvim.keys.normal_mode["<localleader>q"] = "<cmd>!zathura template.pdf &<CR>"
+lvim.keys.normal_mode["<localleader>q"] = "<cmd>!zathura main.pdf &<CR>"
 vim.opt.conceallevel = 2
 vim.g.vimtex_syntax_conceal = {
   accents = 1,
@@ -173,7 +175,8 @@ vim.g.vimtex_compiler_latexmk = {
     "-xelatex",
     "-file-line-error",
     "-synctex=1",
-    "-interaction=nonstopmode"
+    "-interaction=nonstopmode",
+    "-shell-escape"
   }
 }
 vim.g.Tex_DefaultTargetFormat = "pdf"
