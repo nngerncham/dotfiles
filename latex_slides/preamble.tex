@@ -1,0 +1,69 @@
+% BASE TAKEN FROM ICCS315 SCRIBE NOTES
+
+% --- SETUP STUFF ---
+\usepackage{booktabs}
+\usepackage{url}
+
+% --- MATH STUFF ---
+\usepackage{amsthm, amsmath, amssymb}
+\usepackage{mathtools,xspace}
+\usepackage{nicefrac}
+
+\usepackage{bbm}
+\usepackage{dsfont}
+\usepackage{cancel}
+
+\usepackage{blkarray}
+\newcommand{\matindex}[1]{\mbox{\scriptsize#1}}% Matrix index
+
+% --- DIAGRAM STUFF ---
+\usepackage{tikz,pgfplots}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{colortbl}
+\usepackage{caption}
+\usepackage{subcaption}
+\graphicspath{{./figures/}}
+
+\usepackage{tcolorbox}
+\usepackage{framed}
+
+\usepackage{algorithm}
+\usepackage[indLines=true]{algpseudocodex}
+
+\pgfplotsset{compat=1.18}
+
+% Beamer theme with a dash of sass
+\usetheme{CambridgeUS}
+\definecolor{PurpleMUIC}{RGB}{80,43,128}
+\definecolor{YellowMUIC}{RGB}{255,199,38}
+\definecolor{DimYellowMUIC}{RGB}{170,128,14}
+\definecolor{BlueMUIC}{RGB}{0,83,173}
+
+\setbeamercolor{frametitle}{fg=PurpleMUIC,bg=white}
+\setbeamercolor{title}{fg=YellowMUIC,bg=PurpleMUIC}
+\setbeamercolor{structure}{fg=PurpleMUIC,bg=white}
+\setbeamercolor{normal text}{fg=black, bg=white}
+\setbeamercolor{block title}{fg=white,bg=PurpleMUIC}
+\setbeamercolor{block body}{fg=black}
+\setbeamercolor{itemize item}{fg=PurpleMUIC}
+\setbeamercolor{itemize subitem}{fg=BlueMUIC}
+\setbeamercolor{palette primary}{fg=PurpleMUIC}
+\setbeamercolor{palette secondary}{fg=PurpleMUIC}
+\setbeamercolor{palette tertiary}{fg=YellowMUIC,bg=PurpleMUIC}
+
+\beamertemplatenavigationsymbolsempty
+
+\usepackage{algorithm}
+\usepackage[indLines=true]{algpseudocodex}
+\usepackage{algorithmicx}
+\algnewcommand\algorithmicinput{\textbf{Input:}}
+\algnewcommand\Input{\item[\algorithmicinput]}
+\algrenewcommand\algorithmicoutput{\textbf{Output:}}
+\algrenewcommand\Output{\item[\algorithmicoutput]}
+\algrenewcommand\algorithmicrequire{\textbf{Require:}}
+\algrenewcommand\Require{\item[\algorithmicrequire]}
+
+% --- CODE STUFF ---
+\usepackage{minted}
+\usemintedstyle{tango}
