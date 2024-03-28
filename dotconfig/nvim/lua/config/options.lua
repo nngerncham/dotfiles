@@ -40,7 +40,7 @@ vim.g.vimtex_compiler_latexmk = {
     "-file-line-error",
     "-synctex=1",
     "-interaction=nonstopmode",
-    "--shell-escape",
+    "-shell-escape",
   },
 }
 vim.g.Tex_DefaultTargetFormat = "pdf"
