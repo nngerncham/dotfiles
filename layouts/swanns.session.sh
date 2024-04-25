@@ -1,18 +1,22 @@
 # Set a custom session root path. Default is `$HOME`.
 # Must be called before `initialize_session`.
-session_root "~/muic/ma484_graphcomb/"
+session_root "~/PsnProjects/"
 
 # Create session with specified name if it does not already exist. If no
 # argument is given, session name will be based on layout file name.
-if initialize_session "grph"; then
+if initialize_session "sen"; then
 
 	# Create a new window inline within session layout definition.
-	new_window "notes"
-	run_cmd "cd notes/"
+	new_window "swanns"
+	run_cmd "cd swanns"
 
-	new_window "hw"
-	run_cmd "cd homework/"
+	new_window "ParANN"
+	run_cmd "cd ParlayANN"
 
+	new_window "sandbox"
+	run_cmd "cd ~/sandbox"
+
+	# Select the default active window on session creation.
 	select_window 1
 
 fi
