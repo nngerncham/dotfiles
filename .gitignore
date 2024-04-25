@@ -4,3 +4,4 @@
 __pycache__
 dotconfig/tmux/plugins
 dotconfig/fish/fish_variables
+lazy-lock.json
