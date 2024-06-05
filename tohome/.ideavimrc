@@ -3,15 +3,15 @@ set relativenumber
 
 nmap j gj
 nmap k gk
-imap jk <esc>
+imap jk <esc>`^
 
 nmap ge <S-g>
-nmap gl $
-nmap gh 0
+nmap gl g_
+nmap gh _
 
 vmap ge <S-g>
-vmap gl <S-$>
-vmap gh 0
+vmap gl g_
+vmap gh _
 vmap JK <C-\\><C-n>
 
 nmap U <C-r>
