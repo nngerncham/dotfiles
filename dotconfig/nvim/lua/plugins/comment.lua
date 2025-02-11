@@ -3,7 +3,7 @@ return {
   config = function()
     require("Comment").setup()
     local ft = require("Comment.ft")
-    ft({ "c", "cpp", "h", "go", "rust" }, "// %s")
+    ft({ "c", "cpp", "h", "go", "rust", "scala" }, "// %s")
     ft({ "yaml", "toml", "python", "graphql" }, "# %s")
   end,
   lazy = false,
